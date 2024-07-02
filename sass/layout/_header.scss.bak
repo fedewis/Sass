@@ -1,0 +1,15 @@
+.header-index{
+    background-color: $color-fondo;
+    @include flex(row,nowrap,center);
+    display: flex;
+    justify-content: center;
+    h1{
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: $color-letras;
+        font-size: map-get($medidas, lg );
+    }
+    nav{
+        background-color: white;
+    }
+}

@@ -1,0 +1,89 @@
+@import "./utilities/variables";
+@import "./base/reset";
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/footer";
+@import "./components/tipografias";
+@import "./layout/mediaQ/media320";
+@import "./layout/mediaQ/media375";
+@import "./layout/mediaQ/media425";
+@import "./layout/mediaQ/media768";
+@import "./layout/mediaQ/media1024";
+
+
+
+/*
+crear variables para cambiar ej el color a todo de una
+
+$color-fondo: red;
+$color-letras: brown;
+
+arriba ejemplo de variables
+
+.header-index{
+    background-color: $color-fondo;
+    display: flex;
+    justify-content: center;
+    h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    nav{
+        background-color: $color-fondo;
+        .navbar{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            li{
+                a{text-decoration: none;
+                    color: color-letras;
+                    &:hover{
+                        & hace referencia a la clase padre
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .seccion-principal{
+        background-color: cyan;
+        color: darkgoldenrod;
+    }
+}
+
+invocar archivos scss
+
+1ero archivos de Utilities
+
+
+
+@import "./utilities/variables";
+
+invocar archivos scss 
+
+1ero archivos partials de base
+
+ 
+
+@import "./base/reset.scss";
+
+
+luego los layout
+
+
+@import "./layout/header";
+@import "./layout/footer";
+
+
+componentes
+
+
+@import "./components/card";
+
+
+media querys decreciente de pc a desktop
+
+
+@import "./layout/_mediaq/media320";
+
+*/

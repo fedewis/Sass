@@ -1,0 +1,17 @@
+.section-principal{
+    background-color: $color-fondo;
+    color: $color-letras;
+}
+
+.section-1{
+    background-color: aqua;
+    color: red;
+
+}
+
+/* extend es una extención del codigo*/
+
+.section2{
+    @extend.section-1;
+    color:blue;
+}
