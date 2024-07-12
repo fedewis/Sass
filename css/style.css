@@ -42,37 +42,71 @@ button:hover {
 
 .informacionDiaria {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto 1fr;
-  gap: 10px;
-  align-items: center; }
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  /*display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    align-items: center;*/ }
 
-.text p {
-  grid-row: 1;
-  grid-column: 1;
-  font-family: 'Rocketship';
-  text-align: center; }
+.items img {
+  max-width: 100%; }
 
-.ciudad {
-  grid-row: 2;
-  grid-column: auto; }
+/* grid-row: 1;
+    grid-column: 1;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
 
-.ciudad img {
-  max-width: 100%;
-  height: auto;
-  align-items: center; }
+/*.ciudad {
+    grid-row: 2;
+    grid-column: auto;
+    
 
+.ciudad img{
+
+    max-width: 20%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    align-items: center;
+    
+} */
 .cotizacion iframe {
-  grid-row: 1 / span 2;
-  grid-column: 2; }
+  /*grid-row: 1;
+    grid-column: 2;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+   
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    */ }
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; }
+
+.item {
+  background-color: #ffffff;
+  padding: 5px; }
+
+.item img {
+  max-width: 100%;
+  height: auto; }
+
+/*.notas{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    width: 100%;
+}
 
 .notas {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-items: center;
-  width: 100%; }
-
-/*.notas {
     display: flex;
     flex-direction: row;
 }
@@ -82,16 +116,24 @@ button:hover {
     padding: 20px;
     border: 1px solid #ddd;
 }
-*/
-.nota:hover {
-  border: 3px solid coral; }
 
-.nota h2 {
-  font-family: 'Rocketship';
-  font-weight: bold;
+.nota:hover {
+    border: 3px solid coral;
+}
+*/
+.item a {
+  font-family: 'tituloNota';
+  color: black;
+  text-decoration: none;
   margin-bottom: 10px; }
 
-.nota article::first-letter {
+.item p {
+  font-family: 'tituloNota';
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px; }
+
+.item .nota article::first-letter {
   font-size: 40px; }
 
 .secciones a {
@@ -112,15 +154,15 @@ button:hover {
   display: block;
   margin-bottom: 30px; }
 
-.noticias {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px; }
-
+/*.noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 .noticias img {
-  width: 100%;
-  height: auto; }
-
+    width: 100%;
+    height: auto;
+}*/
 .paginas {
   width: 100%; }
 
@@ -140,32 +182,38 @@ button:hover {
   font-family: 'Rocketship';
   src: url("../assets/font/Rocketship.ttf"); }
 
+@font-face {
+  font-family: 'tituloNota';
+  src: url("../assets/font/NoticiaText-Regular.ttf"); }
+
 @media (max-width: 320px) {
-  .informacionDiaria {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .notas {
+  .nav {
     grid-template-columns: 100%; }
-  .noticias {
+  .informacionDiaria {
+    grid-template-columns: 100%; }
+  .secciones {
+    grid-template-columns: 100%; }
+  .contenedor {
     grid-template-columns: 100%; } }
 
-@media (max-width: 375px) {
-  .informacionDiaria {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .notas {
+@media (max-width: 376px) {
+  .nav {
     grid-template-columns: 100%; }
-  .noticias {
+  .informacionDiaria {
+    grid-template-columns: 100%; }
+  .secciones {
+    grid-template-columns: 100%; }
+  .contenedor {
     grid-template-columns: 100%; } }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+  .nav {
+    grid-template-columns: 100%; }
   .informacionDiaria {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .noticias {
+    grid-template-columns: 100%; }
+  .secciones {
+    grid-template-columns: 100%; }
+  .contenedor {
     grid-template-columns: 100%; } }
 
 @media (max-width: 768px) {
@@ -175,7 +223,7 @@ button:hover {
     align-items: center; }
   .galeria {
     grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "item1" "item2"; }
+    grid-template-areas: "item1" "item2"; }
   .notas {
     grid-template-columns: 100%; } }
 

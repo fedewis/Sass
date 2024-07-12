@@ -1,10 +1,14 @@
-@media (max-width: 425px) {
-    .informacionDiaria{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        }
-    .noticias {
+@media (max-width: 426px) {
+    .nav{
         grid-template-columns: 100%;
     }
+    .informacionDiaria{
+        grid-template-columns: 100%;
+        }
+    .secciones{
+        grid-template-columns: 100%;
+        }
+    .contenedor {
+        grid-template-columns: 100%;
+        }
 }
