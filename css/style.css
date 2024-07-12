@@ -175,7 +175,7 @@ button:hover {
     align-items: center; }
   .galeria {
     grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "item1" "item2"; }
+    grid-template-areas: "item1" "item2"; }
   .notas {
     grid-template-columns: 100%; } }
 
